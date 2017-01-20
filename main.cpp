@@ -1,4 +1,5 @@
 #include <QGuiApplication>
+#include "qml2ctranslator.h"
 #include <QQmlContext>
 #include <QQmlApplicationEngine>
 #include <QDebug>
@@ -101,8 +102,8 @@ int main(int argc, char *argv[])
 
     qml2Ctranslator qml2c;
     qml2c.setEngine(&engine);
-    qml2c.setAsutpData(&asutpData);
     engine.rootContext()->setContextProperty("qml2c", &qml2c);
+    qml2c.setSpList();
 
     return app.exec();
 }

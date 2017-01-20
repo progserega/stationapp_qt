@@ -3,6 +3,9 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 
 Item {
+    property alias sp_selector: sp_selector
+    property alias station_selector: station_selector
+    property alias res_selector: res_selector
 
     ColumnLayout {
         id: columnLayout1

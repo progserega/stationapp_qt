@@ -3,7 +3,6 @@
 
 #include <QObject>
 #include <QQmlApplicationEngine>
-#include "xmlasutpdata.h"
 
 class qml2Ctranslator : public QObject
 {
@@ -11,9 +10,7 @@ class qml2Ctranslator : public QObject
 public:
     explicit qml2Ctranslator(QObject *parent = 0);
     void setEngine(QQmlApplicationEngine *data);
-    void setListGorod(QStringList *data);
-    void setAsutpData(xmlAsutpData *data);
-    void updateGorodList(void);
+    void setSpList(void);
 
 signals:
 
@@ -22,8 +19,7 @@ public slots:
 
 private:
     QQmlApplicationEngine *engine;
-    QStringList *listGorod;
-    xmlAsutpData *asutpData;
+    QStringList *sp_list;
 };
 
 #endif // QML2CTRANSLATOR_H
