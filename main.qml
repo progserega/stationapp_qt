@@ -28,10 +28,10 @@ ApplicationWindow {
         id: tabBar
         currentIndex: swipeView.currentIndex
         TabButton {
-            text: qsTr("First")
+            text: qsTr("Выбор Подстанции")
         }
         TabButton {
-            text: qsTr("Second")
+            text: qsTr("Внесение данных")
         }
     }
 }

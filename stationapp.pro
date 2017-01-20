@@ -3,7 +3,8 @@ QT += qml quick sql
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    sqlstore.cpp
+    sqlstore.cpp \
+    qml2ctranslator.cpp
 
 RESOURCES += qml.qrc
 
@@ -14,4 +15,5 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    sqlstore.h
+    sqlstore.h \
+    qml2ctranslator.h

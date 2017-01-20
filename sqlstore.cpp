@@ -247,7 +247,7 @@ bool sqlstore::addStation(QString name, int uid, int sp_id, int res_id, int np_i
 bool sqlstore::isEmpty(void)
 {
     QSqlQuery q;
-    QString sql = "select * from stations limit 1;";
+    QString sql = "select * from station_tbl limit 1;";
     if (!q.exec(sql))
     {
         qDebug() << QTime::currentTime().toString() << __FUNCTION__ << ":" << __LINE__ << "Error sql exec: " << sql << ". QT error: " << db->lastError().text();

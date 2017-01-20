@@ -1,4 +1,5 @@
 #include <QGuiApplication>
+#include <QQmlContext>
 #include <QQmlApplicationEngine>
 #include <QDebug>
 #include <QStandardPaths>
@@ -94,9 +95,14 @@ int main(int argc, char *argv[])
             qDebug() << __FUNCTION__ << ":" << __LINE__ << "Error create tables in sqlite! Path to sqlite db: " << db_path;
             return -1;
         }
+        // fixme
+        db->testFillDb();
     }
-    // fixme
-    db->testFillDb();
+
+    qml2Ctranslator qml2c;
+    qml2c.setEngine(&engine);
+    qml2c.setAsutpData(&asutpData);
+    engine.rootContext()->setContextProperty("qml2c", &qml2c);
 
     return app.exec();
 }
