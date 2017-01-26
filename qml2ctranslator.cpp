@@ -19,9 +19,10 @@ void qml2Ctranslator::setEngine(QQmlApplicationEngine *data)
 // обновить список городов в интерфейсе qml из списка listGorod:
 void qml2Ctranslator::setSpList(void)
 {
-    sp_list->append("test");
-    qDebug() << "sp_list:" << sp_list;
-    engine->rootContext()->setContextProperty("sp_selector", QVariant::fromValue(*sp_list));
+    sp_list->append("test1");
+    sp_list->append("test2");
+    //qDebug() << "sp_list:" << sp_list;
+    engine->rootContext()->setContextProperty("testList", QVariant::fromValue(*sp_list));
 }
 
 void qml2Ctranslator::searchGorod(QString text)
